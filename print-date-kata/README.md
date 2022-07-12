@@ -6,6 +6,8 @@ Unit test the printCurrentDate function.
 
 # Code to test
 
+
+```swift
     public struct PrintDate {
         private let calendar: Calendar;
         private let printer: Printer;
@@ -23,6 +25,7 @@ Unit test the printCurrentDate function.
             self.printer.print_line(line: format.string(from: today))
         }
     }
+```
 
 
 # Learnings
@@ -32,23 +35,38 @@ How to use Unittest Mock to generate the doubles.
 
 ## Tools
 
-    TODO
+    [mockingbird](https://github.com/birdrides/mockingbird)
 
 ### Example of spy
 
-    TODO
+
+```swift
+    // Mocking
+    let bird = mock(Bird.self)
+
+    // Verification
+    verify(bird.fly()).wasCalled()
+```
 
 	
 ### Example of stub
 
-    TODO
+
+```swift
+    // Mocking
+    let bird = mock(Bird.self)
+
+    // Stubbing
+    given(bird.canFly).willReturn(true)
+
+```
 
 ## How to run and see the result
 ## Locally
 ### on Linux and Mac
 Run the tests
 
-    make tests
+    make test
 
 Run the code coverage
 
@@ -61,7 +79,7 @@ Run the code coverage
 
 Run the tests
     
-    make docker-tests
+    make docker-test
 
 Run the code coverage
     
