@@ -13,6 +13,9 @@ let package = Package(
         .target(
             name: "GildedRose",
             dependencies: []),
+        .target(
+            name: "Main",
+            dependencies: ["GildedRose"]),
         .testTarget(
             name: "GildedRoseTests",
             dependencies: ["GildedRose"]),
